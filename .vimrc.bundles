@@ -78,7 +78,7 @@ call plug#begin('~/.vim/plugged')
     " In your .vimrc.before.local file
     " list only the plugin groups you will use
     if !exists('g:spf13_bundle_groups')
-        let g:spf13_bundle_groups=['general', 'writing', 'deoplete', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc','rust', 'markdown']
+        let g:spf13_bundle_groups=['general', 'writing', 'deoplete', 'programming', 'go', 'php', 'ruby', 'python', 'javascript', 'html', 'misc','rust', 'markdown']
     endif
 
     " To override all the included bundles, add the following to your

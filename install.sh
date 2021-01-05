@@ -15,10 +15,10 @@
 #   limitations under the License.
 
 ############################  SETUP PARAMETERS
-app_name='vimConfig'
-[ -z "$APP_PATH" ] && APP_PATH="$HOME/.vimConfig"
-[ -z "$REPO_URI" ] && REPO_URI='https://github.com/abdalrohman/vimConfig.git'
-[ -z "$REPO_BRANCH" ] && REPO_BRANCH='vimConfig'
+app_name='spf13-vim'
+[ -z "$APP_PATH" ] && APP_PATH="$HOME/.spf13-vim-3"
+[ -z "$REPO_URI" ] && REPO_URI='https://github.com/luoqeng/spf13-vim.git'
+[ -z "$REPO_BRANCH" ] && REPO_BRANCH='4.0'
 debug_mode='1'
 fork_maintainer='0'
 [ -z "$PLUG_URI" ] && PLUG_URI="https://github.com/junegunn/vim-plug.git"

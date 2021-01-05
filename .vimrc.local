@@ -1,0 +1,21 @@
+nnoremap <Leader>a :Ack!<Space>
+
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+    "let g:ackprg = 'rg -i --vimgrep'
+endif
+
+set fileencodings=ucs-bom,utf-8,utf-16,gbk,big5,gb18030,latin1
+
+set fileencoding=utf-8
+
+set encoding=utf-8
+
+"if has("termguicolors")
+    "" fix bug for vim
+    "set t_8f=[38;2;%lu;%lu;%lum
+    "set t_8b=[48;2;%lu;%lu;%lum
+
+    "" enable true color
+    "set termguicolors
+"endif
