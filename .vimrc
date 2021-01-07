@@ -884,6 +884,10 @@
             call deoplete#custom#option('sources', {
             \ '_': ['ale'],
             \})
+            call deoplete#custom#option('omni_patterns', {
+            \ 'go': '[^. *\t]\.\w*',
+            \})
+
             " Enable heavy omni completion.
             if !exists('g:deoplete#sources#omni#input_patterns')
                 let g:deoplete#sources#omni#input_patterns = {}

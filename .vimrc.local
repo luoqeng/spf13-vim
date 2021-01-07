@@ -1,12 +1,12 @@
 nnoremap <Leader>a :Ack!<Space>
 
 let g:python3_host_prog = '/usr/bin/python3'
-let g:deoplete#enable_at_startup = 1
+let g:rooter_manual_only = 1
 
-if executable('ag')
-    let g:ackprg = 'ag --vimgrep'
+" if executable('ag')
+    " let g:ackprg = 'ag --vimgrep'
     "let g:ackprg = 'rg -i --vimgrep'
-endif
+" endif
 
 set fileencodings=ucs-bom,utf-8,utf-16,gbk,big5,gb18030,latin1
 

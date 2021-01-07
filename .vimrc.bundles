@@ -260,6 +260,7 @@ call plug#begin('~/.vim/plugged')
     " Go Lang {
         if count(g:spf13_bundle_groups, 'go')
             "Plug 'Blackrush/vim-gocode'
+            Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
             Plug 'fatih/vim-go'
         endif
     " }
