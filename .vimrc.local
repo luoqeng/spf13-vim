@@ -1,5 +1,8 @@
 nnoremap <Leader>a :Ack!<Space>
 
+let g:python3_host_prog = '/usr/bin/python3'
+let g:deoplete#enable_at_startup = 1
+
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
     "let g:ackprg = 'rg -i --vimgrep'
@@ -19,3 +22,6 @@ set encoding=utf-8
     "" enable true color
     "set termguicolors
 "endif
+"
+
+"autocmd FileType make set noexpandtab
