@@ -180,14 +180,14 @@
     " color space-vim-dark
     " set termguicolors
     " hi LineNr ctermbg=NONE guibg=NONE
-    
-    if !exists('g:override_spf13_bundles') && filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
+
+    if !exists('g:override_spf13_bundles') && filereadable(expand("~/.vim/plugged/vim-colors-solarized/colors/solarized.vim"))
         let g:solarized_termcolors=256
         let g:solarized_termtrans=1
         let g:solarized_contrast="normal"
         let g:solarized_visibility="normal"
         color solarized             " Load a colorscheme
-    endif"
+    endif
 
     set tabpagemax=15               " Only show 15 tabs
     set showmode                    " Display the current mode
@@ -1030,7 +1030,7 @@
 
         " See `:echo g:airline_theme_map` for some more choices
         " Default in terminal vim is 'dark'
-        
+
         " if isdirectory(expand("~/.vim/plugged/vim-airline-themes/"))
             " let g:airline_powerline_fonts = 1
             " let g:airline#extensions#hunks#enabled=0
