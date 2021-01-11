@@ -177,9 +177,17 @@
 
 " Vim UI {
 
-    color space-vim-dark
-    set termguicolors
-    hi LineNr ctermbg=NONE guibg=NONE
+    " color space-vim-dark
+    " set termguicolors
+    " hi LineNr ctermbg=NONE guibg=NONE
+    
+    if !exists('g:override_spf13_bundles') && filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
+        let g:solarized_termcolors=256
+        let g:solarized_termtrans=1
+        let g:solarized_contrast="normal"
+        let g:solarized_visibility="normal"
+        color solarized             " Load a colorscheme
+    endif"
 
     set tabpagemax=15               " Only show 15 tabs
     set showmode                    " Display the current mode
@@ -1022,45 +1030,58 @@
 
         " See `:echo g:airline_theme_map` for some more choices
         " Default in terminal vim is 'dark'
-        if isdirectory(expand("~/.vim/plugged/vim-airline-themes/"))
-            let g:airline_powerline_fonts = 1
-            let g:airline#extensions#hunks#enabled=0
-            let g:airline#extensions#branch#enabled=1
-            let g:airline#extensions#tabline#enabled = 1
-            let g:airline#extensions#tabline#show_close_button = 0
+        
+        " if isdirectory(expand("~/.vim/plugged/vim-airline-themes/"))
+            " let g:airline_powerline_fonts = 1
+            " let g:airline#extensions#hunks#enabled=0
+            " let g:airline#extensions#branch#enabled=1
+            " let g:airline#extensions#tabline#enabled = 1
+            " let g:airline#extensions#tabline#show_close_button = 0
+            " if !exists('g:airline_theme')
+                " let g:airline_theme = 'violet'
+            " endif
+            " if !exists('g:airline_powerline_fonts')
+                " if !exists('g:airline_symbols')
+                    " let g:airline_symbols = {}
+                " endif
+                " " unicode symbols
+                " let g:airline_left_sep = '»'
+                " let g:airline_left_sep = '▶'
+                " let g:airline_right_sep = '«'
+                " let g:airline_right_sep = '◀'
+                " let g:airline_symbols.crypt = '🔒'
+                " let g:airline_symbols.linenr = '␊'
+                " let g:airline_symbols.linenr = '␤'
+                " let g:airline_symbols.linenr = '¶'
+                " let g:airline_symbols.maxlinenr = '☰'
+                " let g:airline_symbols.maxlinenr = ''
+                " let g:airline_symbols.branch = '⎇'
+                " let g:airline_symbols.paste = 'ρ'
+                " let g:airline_symbols.paste = 'Þ'
+                " let g:airline_symbols.paste = '∥'
+                " let g:airline_symbols.spell = 'Ꞩ'
+                " let g:airline_symbols.notexists = '∄'
+                " let g:airline_symbols.whitespace = 'Ξ'
+                " " airline symbols
+                " let g:airline_left_alt_sep = ''
+                " let g:airline_right_alt_sep = ''
+                " let g:airline_symbols.branch = ''
+                " let g:airline_symbols.readonly = ''
+                " let g:airline_symbols.linenr = ''
+            " endif
+        " endif
+
+        if isdirectory(expand("~/.vim/bundle/vim-airline-themes/"))
             if !exists('g:airline_theme')
-                let g:airline_theme = 'violet'
+                let g:airline_theme = 'solarized'
             endif
             if !exists('g:airline_powerline_fonts')
-                if !exists('g:airline_symbols')
-                    let g:airline_symbols = {}
-                endif
-                " unicode symbols
-                let g:airline_left_sep = '»'
-                let g:airline_left_sep = '▶'
-                let g:airline_right_sep = '«'
-                let g:airline_right_sep = '◀'
-                let g:airline_symbols.crypt = '🔒'
-                let g:airline_symbols.linenr = '␊'
-                let g:airline_symbols.linenr = '␤'
-                let g:airline_symbols.linenr = '¶'
-                let g:airline_symbols.maxlinenr = '☰'
-                let g:airline_symbols.maxlinenr = ''
-                let g:airline_symbols.branch = '⎇'
-                let g:airline_symbols.paste = 'ρ'
-                let g:airline_symbols.paste = 'Þ'
-                let g:airline_symbols.paste = '∥'
-                let g:airline_symbols.spell = 'Ꞩ'
-                let g:airline_symbols.notexists = '∄'
-                let g:airline_symbols.whitespace = 'Ξ'
-                " airline symbols
-                let g:airline_left_alt_sep = ''
-                let g:airline_right_alt_sep = ''
-                let g:airline_symbols.branch = ''
-                let g:airline_symbols.readonly = ''
-                let g:airline_symbols.linenr = ''
+                " Use the default set of separators with a few customizations
+                let g:airline_left_sep='›'  " Slightly fancier than '>'
+                let g:airline_right_sep='‹' " Slightly fancier than '<'
             endif
         endif
+
     " }
 
 
